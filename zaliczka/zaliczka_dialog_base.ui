@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>408</width>
+    <height>318</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -49,7 +49,7 @@
     <string>Różnica H</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pbpole">
    <property name="geometry">
     <rect>
      <x>230</x>

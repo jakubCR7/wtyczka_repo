@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_wtyka2DialogBase(object):
     def setupUi(self, wtyka2DialogBase):
         wtyka2DialogBase.setObjectName("wtyka2DialogBase")
-        wtyka2DialogBase.resize(400, 300)
+        wtyka2DialogBase.resize(408, 318)
         self.comboBox = QtWidgets.QComboBox(wtyka2DialogBase)
         self.comboBox.setGeometry(QtCore.QRect(30, 30, 73, 22))
         self.comboBox.setObjectName("comboBox")
@@ -24,9 +24,9 @@ class Ui_wtyka2DialogBase(object):
         self.pbtnroznicaH = QtWidgets.QPushButton(wtyka2DialogBase)
         self.pbtnroznicaH.setGeometry(QtCore.QRect(120, 30, 93, 28))
         self.pbtnroznicaH.setObjectName("pbtnroznicaH")
-        self.pushButton_2 = QtWidgets.QPushButton(wtyka2DialogBase)
-        self.pushButton_2.setGeometry(QtCore.QRect(230, 30, 93, 28))
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.pbpole = QtWidgets.QPushButton(wtyka2DialogBase)
+        self.pbpole.setGeometry(QtCore.QRect(230, 30, 93, 28))
+        self.pbpole.setObjectName("pbpole")
 
         self.retranslateUi(wtyka2DialogBase)
         QtCore.QMetaObject.connectSlotsByName(wtyka2DialogBase)
@@ -36,5 +36,4 @@ class Ui_wtyka2DialogBase(object):
         wtyka2DialogBase.setWindowTitle(_translate("wtyka2DialogBase", "wtyka2"))
         self.label.setText(_translate("wtyka2DialogBase", "WYNIK"))
         self.pbtnroznicaH.setText(_translate("wtyka2DialogBase", "Różnica H"))
-        self.pushButton_2.setText(_translate("wtyka2DialogBase", "Pole"))
-
+        self.pbpole.setText(_translate("wtyka2DialogBase", "Pole"))
