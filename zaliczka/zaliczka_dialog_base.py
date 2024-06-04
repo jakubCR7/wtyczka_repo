@@ -37,3 +37,4 @@ class Ui_wtyka2DialogBase(object):
         self.label.setText(_translate("wtyka2DialogBase", "WYNIK"))
         self.pbtnroznicaH.setText(_translate("wtyka2DialogBase", "Różnica H"))
         self.pushButton_2.setText(_translate("wtyka2DialogBase", "Pole"))
+
