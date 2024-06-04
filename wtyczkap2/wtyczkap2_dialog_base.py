@@ -15,20 +15,47 @@ class Ui_wtyczkap2DialogBase(object):
     def setupUi(self, wtyczkap2DialogBase):
         wtyczkap2DialogBase.setObjectName("wtyczkap2DialogBase")
         wtyczkap2DialogBase.resize(400, 300)
-        self.button_box = QtWidgets.QDialogButtonBox(wtyczkap2DialogBase)
-        self.button_box.setGeometry(QtCore.QRect(30, 240, 341, 32))
-        self.button_box.setOrientation(QtCore.Qt.Horizontal)
-        self.button_box.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
-        self.button_box.setObjectName("button_box")
+        self.obliczawysokosc = QtWidgets.QPushButton(wtyczkap2DialogBase)
+        self.obliczawysokosc.setGeometry(QtCore.QRect(30, 90, 121, 28))
+        self.obliczawysokosc.setObjectName("obliczawysokosc")
+        self.lblwysokosc = QtWidgets.QLabel(wtyczkap2DialogBase)
+        self.lblwysokosc.setGeometry(QtCore.QRect(200, 100, 121, 20))
+        self.lblwysokosc.setObjectName("lblwysokosc")
+        self.combopunkty = QtWidgets.QComboBox(wtyczkap2DialogBase)
+        self.combopunkty.setGeometry(QtCore.QRect(30, 20, 161, 41))
+        self.combopunkty.setObjectName("combopunkty")
+        self.obliczapole = QtWidgets.QPushButton(wtyczkap2DialogBase)
+        self.obliczapole.setGeometry(QtCore.QRect(30, 140, 121, 28))
+        self.obliczapole.setObjectName("obliczapole")
+        self.lblpole = QtWidgets.QLabel(wtyczkap2DialogBase)
+        self.lblpole.setGeometry(QtCore.QRect(200, 150, 121, 20))
+        self.lblpole.setObjectName("lblpole")
+        self.combosystemkoord = QtWidgets.QComboBox(wtyczkap2DialogBase)
+        self.combosystemkoord.setGeometry(QtCore.QRect(260, 30, 73, 22))
+        self.combosystemkoord.setObjectName("combosystemkoord")
+        self.combosystemkoord.addItem("")
+        self.combosystemkoord.addItem("")
+        self.btnimport = QtWidgets.QPushButton(wtyczkap2DialogBase)
+        self.btnimport.setGeometry(QtCore.QRect(30, 190, 121, 28))
+        self.btnimport.setObjectName("btnimport")
+        self.lblpole_2 = QtWidgets.QLabel(wtyczkap2DialogBase)
+        self.lblpole_2.setGeometry(QtCore.QRect(200, 190, 121, 20))
+        self.lblpole_2.setObjectName("lblpole_2")
 
         self.retranslateUi(wtyczkap2DialogBase)
-        self.button_box.accepted.connect(wtyczkap2DialogBase.accept) # type: ignore
-        self.button_box.rejected.connect(wtyczkap2DialogBase.reject) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(wtyczkap2DialogBase)
 
     def retranslateUi(self, wtyczkap2DialogBase):
         _translate = QtCore.QCoreApplication.translate
         wtyczkap2DialogBase.setWindowTitle(_translate("wtyczkap2DialogBase", "wtyczkap2"))
+        self.obliczawysokosc.setText(_translate("wtyczkap2DialogBase", "Oblicz wysokość"))
+        self.lblwysokosc.setText(_translate("wtyczkap2DialogBase", "Różnica wysokośći"))
+        self.obliczapole.setText(_translate("wtyczkap2DialogBase", "Oblicz pole"))
+        self.lblpole.setText(_translate("wtyczkap2DialogBase", "Pole"))
+        self.combosystemkoord.setItemText(0, _translate("wtyczkap2DialogBase", "1992"))
+        self.combosystemkoord.setItemText(1, _translate("wtyczkap2DialogBase", "2000 (+strefa)"))
+        self.btnimport.setText(_translate("wtyczkap2DialogBase", "Importuj"))
+        self.lblpole_2.setText(_translate("wtyczkap2DialogBase", "Ścieżka pliku"))
 
 
 if __name__ == "__main__":
