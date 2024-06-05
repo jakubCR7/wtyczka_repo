@@ -64,7 +64,7 @@ class wtyka2Dialog(QtWidgets.QDialog, FORM_CLASS):
             
             przewyzszenie = round(H2 - H1, 3)
             
-            self.label_wys.setText(str(przewyzszenie) +'m')
+            self.wynikroznicyh.setText(str(przewyzszenie) +'m')
             
             
         QgsMessageLog.logMessage('Różnica wysokości między punktami wynosi:' +str(przewyzszenie) +'m', level = Qgis.Success)
@@ -96,7 +96,7 @@ class wtyka2Dialog(QtWidgets.QDialog, FORM_CLASS):
             pole /= 2
             pole = round(abs(pole/10000), 3)
             
-            pole = self.label_pole.setText(str(pole) +'ha')
+            pole = self.wynikpola.setText(str(pole) +'ha')
 
             QgsMessageLog.logMessage('Pole powierzchni między punktami to: {pole} ha', level = Qgis.Success)
         
