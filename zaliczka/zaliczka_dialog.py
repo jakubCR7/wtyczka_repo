@@ -39,28 +39,27 @@ class wtyka2Dialog(QtWidgets.QDialog, FORM_CLASS):
         """Constructor."""
         super(wtyka2Dialog, self).__init__(parent)
         self.setupUi(self)
-
+        self.btnbx.accepted.connect(self.accept)
+        self.btnbx.rejected.connect(self.reject)
         self.pbtnroznicaH.clicked.connect(self.roznicaH)
-
-
         self.pbpole.clicked.connect(self.pole)
 
     def roznicaH(self):
         
-        obiekt = self.layer.currentLayer()
-        if obiekt is None:
+        warstwa = self.layer.currentLayer()
+        if warstwa is None:
             iface.messageBar().pushMessage("Różnica wysokosci", 'Nie wybrano aktywnej warstwy', level = Qgis.Warning)
             return
         
-        obiekt2 = self.layer.currentLayer().selectedFeatures()
-        if len(obiekt2) != 2:
+        obiekt = self.layer.currentLayer().selectedFeatures()
+        if len(obiekt) != 2:
             iface.messageBar().pushMessage("Różnica wysokosci", 'W celu obliczenia różnicy wysokosci wybierz 2 punkty.', level = Qgis.Warning)
             return
         
-        if len(obiekt2) == 2:
+        if len(obiekt) == 2:
             
-            H1 = float(obiekt2[0]['h_plevrf2007nh'])
-            H2 = float(obiekt2[1]['h_plevrf2007nh'])
+            H1 = float(obiekt[0]['h_plevrf2007nh'])
+            H2 = float(obiekt[1]['h_plevrf2007nh'])
             
             przewyzszenie = round(H2 - H1, 3)
             
