@@ -91,7 +91,7 @@ class wtyka2Dialog(QtWidgets.QDialog, FORM_CLASS):
             dl = len(punkty)
             for e in range(dl):
                 a = (e + 1) % dl
-                pole += (punkty[a].x() + punkty[e].x()) * (punkty[a].y() - punkty[e].y())
+                pole += (punkty[a].x() * punkty[e].y() - punkty[e].x() * punkty[a].y())
 
             pole /= 2
             pole = round(abs(pole/10000), 3)
