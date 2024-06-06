@@ -59,8 +59,8 @@ class wtyka2Dialog(QtWidgets.QDialog, FORM_CLASS):
         
         if len(obiekt2) == 2:
             
-            H1 = float(obiekt2[0]['h_plevrf2007nh'])
-            H2 = float(obiekt2[1]['h_plevrf2007nh'])
+            H1 = float(obiekt2[0]['wysokosc'])
+            H2 = float(obiekt2[1]['wysokosc'])
             
             przewyzszenie = round(H2 - H1, 3)
             
