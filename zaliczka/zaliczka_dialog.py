@@ -45,6 +45,15 @@ class wtyka2Dialog(QtWidgets.QDialog, FORM_CLASS):
 
         self.pbpole.clicked.connect(self.pole)
 
+        self.ha.stateChanged.connect(self.checkboxStateChanged)
+        
+
+        self.m2.stateChanged.connect(self.checkboxStateChanged)
+        
+        self.ar.stateChanged.connect(self.checkboxStateChanged)
+
+    def checkboxStateChanged(self, state):
+        pass
     def roznicaH(self):
         
         obiekt = self.layer.currentLayer()
@@ -80,6 +89,10 @@ class wtyka2Dialog(QtWidgets.QDialog, FORM_CLASS):
             y = float(o.geometry().asPoint().y())
             p = QgsPointXY(x, y)
             punkty.append(p)
+
+        unit_ha = self.ha.isChecked()
+        unit_m2 = self.m2.isChecked()
+        unit_ar = self.ar.isChecked()
             
         if len(obiekty)<3:
             iface.messageBar().pushMessage("Pole powierzchni", 'W celu policzenia pola wybierz conajmniej 3 punkty.', level = Qgis.Warning)
@@ -94,9 +107,17 @@ class wtyka2Dialog(QtWidgets.QDialog, FORM_CLASS):
                 pole += (punkty[a].x() * punkty[e].y() - punkty[e].x() * punkty[a].y())
 
             pole /= 2
-            pole = round(abs(pole/10000), 3)
-            
-            pole = self.wynikpola.setText(str(pole) +'ha')
+
+            if unit_ha:
+                pole = round(abs(pole) / 10000, 3)  # Konwersja do hektarów
+                self.wynikpola.setText(str(pole) + ' ha')
+            elif unit_m2:
+                pole = round(abs(pole), 3)  # Pozostawienie w metrach kwadratowych
+                self.wynikpola.setText(str(pole) + ' m²')
+            elif unit_ar:
+                pole = round(abs(pole) / 100, 3)  # Konwersja do arów
+                self.wynikpola.setText(str(pole) + ' ar')
+                pole = round(abs(pole/10000), 3)
 
             QgsMessageLog.logMessage('Pole powierzchni między punktami to: {pole} ha', level = Qgis.Success)
         

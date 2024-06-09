@@ -43,6 +43,15 @@ class Ui_wtyka2DialogBase(object):
         self.lblpoleinfo = QtWidgets.QLabel(wtyka2DialogBase)
         self.lblpoleinfo.setGeometry(QtCore.QRect(10, 150, 251, 51))
         self.lblpoleinfo.setObjectName("lblpoleinfo")
+        self.ha = QtWidgets.QCheckBox(wtyka2DialogBase)
+        self.ha.setGeometry(QtCore.QRect(170, 140, 67, 18))
+        self.ha.setObjectName("ha")
+        self.m2 = QtWidgets.QCheckBox(wtyka2DialogBase)
+        self.m2.setGeometry(QtCore.QRect(170, 160, 67, 18))
+        self.m2.setObjectName("m2")
+        self.ar = QtWidgets.QCheckBox(wtyka2DialogBase)
+        self.ar.setGeometry(QtCore.QRect(170, 180, 67, 18))
+        self.ar.setObjectName("ar")
 
         self.retranslateUi(wtyka2DialogBase)
         self.btnbx.accepted.connect(wtyka2DialogBase.accept) # type: ignore
@@ -56,4 +65,7 @@ class Ui_wtyka2DialogBase(object):
         self.pbpole.setText(_translate("wtyka2DialogBase", "Pole"))
         self.lblwysinfo.setText(_translate("wtyka2DialogBase", "W celu obliczenia różnicy wysokości kliknij:"))
         self.lblpoleinfo.setText(_translate("wtyka2DialogBase", "W celu obliczenia pola kliknij:"))
+        self.ha.setText(_translate("wtyka2DialogBase", "ha"))
+        self.m2.setText(_translate("wtyka2DialogBase", "m2"))
+        self.ar.setText(_translate("wtyka2DialogBase", "ar"))
 from qgsmaplayercombobox import QgsMapLayerComboBox

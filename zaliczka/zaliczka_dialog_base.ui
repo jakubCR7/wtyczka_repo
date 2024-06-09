@@ -117,6 +117,45 @@
     <string>W celu obliczenia pola kliknij:</string>
    </property>
   </widget>
+  <widget class="QCheckBox" name="ha">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>140</y>
+     <width>67</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ha</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="m2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>160</y>
+     <width>67</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>m2</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="ar">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>180</y>
+     <width>67</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ar</string>
+   </property>
+  </widget>
  </widget>
  <customwidgets>
   <customwidget>
