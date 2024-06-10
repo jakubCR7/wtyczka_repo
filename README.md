@@ -1,5 +1,5 @@
 ## Informatyka Geodezyjna II
-## Projekt 1 - Transformacje 
+## Projekt 2 - Wtyczka do QGIS
 Wtyczka umożliwia wyznaczanie różnic wysokości pomiędzy punktami oraz liczenie pól między punktami w hektarach, mekrach kwadratowych lub arach
 
 ## Wymagania do obsługi programu:
@@ -8,18 +8,20 @@ Dodatkowo potrzebne są biblioteki:
 qgis.PyQT, qgis.utils, qgis.core, PyQt5.QtWidgets, qgis.gui, PyQt5.QtCore
 
 ## Funkcje programu:
-Opracowanie danych z poziomu wtyczki po wgraniu do projektu QGIS
-**Użytkownik wybiera punkty z aktywnej warstwy:** <br>
-GRS80<br>
-WGRS84<br>
-Krasowski <br>
+Opracowanie danych z poziomu wtyczki po wgraniu do projektu QGIS.
 
-**Użytkownik wybiera spośród dostępnych transformacji:** <br>
- 1 = X, Y, Z --> phi, lam, h <br>
- 2 = phi, lam, h --> X, Y, Z <br>
- 3 = X, Y, Z --> neu <br>
- 4 = BL --> X2000, Y2000 <br>
- 5 = BL --> X92, Y92<br>
+**Liczenie różnicy wysokości pomiędzy wybranymi punktami z aktywnej warstwy:** <br>
+W celu obliczenia różnicy wysokośći między punktami należy wybrać dokładnie dwa punkty znajdujące się na tej samej warstwie.
+Ważne, aby w tabeli atrybutów znajdowała się kolumna z danymi "wysokosc", w której znajdują się wysokości puntków.
+Wtyczka odejmuje wysokość punktu początkowego od punktu końcowego, co może dać wynik dodatni lub ujemny, na tej podstawie 
+można stwierdzić, czy nastąpił spadek czy wzrost wysokości. Wynik podany jest w metrach z dokładnością do centymetra.
+ <br>
+ <br>
+**Liczenie pola powierzchni pomiędzy zaznaczonymi punktami** <br>
+W celu obliczenia pola powierzchni między punktami użytkownik wybiera minimum trzy punkty leżące na tej samej warstwie. 
+Na podstawie współrzędnych wybranych punktów program obliczy pole powierzchni pomiędzy nimi, przy użyciu metody Gaussa.
+Użytkownik może wybrać, w jakich jednostkach wyświetli się otrzymany wynik. Wybór pomiędzy m2, ha, ar, z dokładnością do trzech miejsc po przecinku.
+
 ### Działanie programu:
 Uruchamiając program Python wymagane jest również podanie nazwy pliku ze współrzędnymi wraz z jego rozszerzeniem. Następnie, zgodnie z instrukcjami programu należy wybrać elipsoidę. Następnie, poprzez wpisanie liczby od 1 do 5, dokonujemy wyboru transformacji. Załączony plik z danymi musi być zgodny z wybraną transformacją tj. dla transformacji **1, 3** plik z danymi powinien zawierać współrzędne ortokartezjańskie, a dla transformacji **2, 4, 5** współrzędne geodezyjne. W przeciwnym wypadku uzyskane wyniki nie będą poprawne. Opcje, spośród których dokonujemy wyboru są podane powyżej w punkcje **Funkcje programu**. W przypadku wybrania opcji **3** program poprosi użytkownika o podanie współrzędnych środka układu NEU.
 
