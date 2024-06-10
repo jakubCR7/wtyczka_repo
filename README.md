@@ -2,12 +2,12 @@
 ## Projekt 2 - Wtyczka do QGIS
 Wtyczka umożliwia wyznaczanie różnic wysokości pomiędzy punktami oraz liczenie pól między punktami w hektarach, metrach kwadratowych lub arach
 
-## Wymagania do obsługi programu:
+### Wymagania do obsługi programu:
 Do poprawnego działania wtyczki wymagany jest zainstalowany program QGiS. Folder z wtyczką musi być umieszczony w folderze plugins w plikach programu QGiS. 
 Dodatkowo potrzebne są biblioteki:
 qgis.PyQT, qgis.utils, qgis.core, PyQt5.QtWidgets, qgis.gui, PyQt5.QtCore
 
-## Funkcje programu:
+### Funkcje programu:
 Opracowanie danych z poziomu wtyczki po wgraniu do projektu QGIS.
 
 **Liczenie różnicy wysokości pomiędzy wybranymi punktami z aktywnej warstwy:** <br>
