@@ -6,7 +6,8 @@ Program umożliwia implementację transformacji geodezyjnych zgodnie z potrzebam
 Program został stworzony z użyciem programu Python 3.11.5, zaimporotwana została biblioteka NumPy, pozwalająca na wykonywanie obliczeń numerycznych i naukowych. Program został napisany dla systemu operacyjnego Microsoft Windows 10 PRO i wyższych. Konieczna jest instalacja programu python.exe oraz biblioteki NumPy w konsoli.
 
 ## Funkcje programu:
-**Użytkownik wybiera spośród dostępnych elipsoid:** <br>
+Opracowanie danych z poziomu wtyczki po wgraniu do projektu QGIS
+**Użytkownik wybiera punkty z aktywnej warstwy:** <br>
 GRS80<br>
 WGRS84<br>
 Krasowski <br>
