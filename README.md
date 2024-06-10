@@ -26,29 +26,12 @@ Użytkownik może wybrać, w jakich jednostkach wyświetli się otrzymany wynik.
 Uruchamiając program Python wymagane jest również podanie nazwy pliku ze współrzędnymi wraz z jego rozszerzeniem. Następnie, zgodnie z instrukcjami programu należy wybrać elipsoidę. Następnie, poprzez wpisanie liczby od 1 do 5, dokonujemy wyboru transformacji. Załączony plik z danymi musi być zgodny z wybraną transformacją tj. dla transformacji **1, 3** plik z danymi powinien zawierać współrzędne ortokartezjańskie, a dla transformacji **2, 4, 5** współrzędne geodezyjne. W przeciwnym wypadku uzyskane wyniki nie będą poprawne. Opcje, spośród których dokonujemy wyboru są podane powyżej w punkcje **Funkcje programu**. W przypadku wybrania opcji **3** program poprosi użytkownika o podanie współrzędnych środka układu NEU.
 
 ### Przykładowe użycie programu:
-1. Użytkownik uruchamia konsolę CMD (wiersz poleceń) w folderze, w którym znajduje się program.<br>
-**cd C:\Users\admin\Desktop\Program1**
-2. Program uruchamia się poprzez wpisanie poleceń **python**, po spacji nazwa programu **Program1.txt**, oraz po spacji nazwa pliku z danymi, np. **wsp_int.txt** i po spacji żądaną nazwę pliku z danymi wyjściowymi, np. **dane_wyjsciowe.txt**.
-3. Wymagania wobec pliku z danymi:
-   - nagłówek może być dowolny
-   - separatorem danych jest przecinek ','
-   - dane muszą być różne od 0, inaczej program nie będzie działał
-   - przykładowy wygląd pliku: <br>
-   ----- X ----- Y ----- Z ----- <br>
-   1009.9999,1008.8889,107.777
- 4. Wybór elipsoidy poprzez wpisanie w konsolę, według poleceń na ekranie np. **grs80**
- 5. Wybór transformacji poprzez wpisanie w konsolę odpowiedniej cyfry, według poleceń na ekranie, np. X,Y,Z-->neu **1**
-
-Przy zastosowaniu prawidłowej ścieżki i odpowiednich poleceń program powinien się uruchomić, następnie wyświetlić komunikat:<br>
-**program zapisał plik o nazwie "dane_wyjsciowe.txt" ze współrzędnymi geodezyjnymi w bierzącym folderze**
-#### Przykładowe użycie pliku:
-Aby program zadziałał, dane w pliku muszą spełniać wyżej przedstawione wymogi, można zweryfikować za pomocą przykładowych plików umieszczonych na stronie.<br>
-
-Dane wejściowe:'wsp_inp.txt'<br>
-Pod nagłówkiem dane zapisane są w trzech kolumnach, pierwsza to współrzędne X, druga to współrzędne Y, a trzecia to wysokość Z, wszystkie wartości podane w metrach.<br>
-
-Dane wyjściowe:<br>
-W pliku wyjściowym dane są rozłożone tak, jak w pliku wejściowym.
+1. Użytkownik uruchamia program QGiS, w którym umieszcza warstwy z punktami na których chce wykonywać obliczenia.
+2. Jeżeli folder z wtyczką został umieszczony poprawnie, wtyczka będzie się znajdować w panelu zarządzanie wtyczkami w zakładce zaintalowane wtyczki. Ze względu na to, że nasza wtyczka jest wtyczką eksperymentalną należy zaznaczyć, aby widoczne były również wtyczki eksperymentalne. Należy zaznaczyć okienko, aby wtyczka była gotowa do użycia.
+3. Należy zaznaczyć punkty, na których przeprowadzone mają zostać obliczenia za pomocą narzędzia zaznaczanie.
+4. z panelu wtyczki wybrać wtyczkę o nazwie **wtyka2**
+5. W pierszym polu należy wybrać z listy warstwę na której znajdują się zaznaczone punkty, następnie wybrać funkcjonalność wysokość lub pole. <br> W przypadku wybrania pola należy zaznaczyć **jeden** z podanych checkbox'ów w zależności od jednostki w jakiej chce się uzyskać wynik.
+6. Program zwróci wartość pola w odpowiedniej jednostce lub wartość różnicy wysokości (w zależności od wybranej funkcji) w okienku wtyczki.
 
 ### Błędy programu:
 1. W przypadku pliku o odpowiedniej strukturze, jednak z błędnymi danymi (np. phi lam h zamiast XYZ) program nie wyrzuci błędu, tylko nieprawidłowe wartości
