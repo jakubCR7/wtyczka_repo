@@ -1,9 +1,11 @@
 ## Informatyka Geodezyjna II
 ## Projekt 1 - Transformacje 
-Program umożliwia implementację transformacji geodezyjnych zgodnie z potrzebami użytkownika.
+Wtyczka umożliwia wyznaczanie różnic wysokości pomiędzy punktami oraz liczenie pól między punktami w hektarach, mekrach kwadratowych lub arach
 
 ## Wymagania do obsługi programu:
-Program został stworzony z użyciem programu Python 3.11.5, zaimporotwana została biblioteka NumPy, pozwalająca na wykonywanie obliczeń numerycznych i naukowych. Program został napisany dla systemu operacyjnego Microsoft Windows 10 PRO i wyższych. Konieczna jest instalacja programu python.exe oraz biblioteki NumPy w konsoli.
+Do poprawnego działania wtyczki wymagany jest zainstalowany program QGiS. Folder z wtyczką musi być umieszczony w folderze plugins w plikach programu QGiS. 
+Dodatkowo potrzebne są biblioteki:
+qgis.PyQT, qgis.utils, qgis.core, PyQt5.QtWidgets, qgis.gui, PyQt5.QtCore
 
 ## Funkcje programu:
 Opracowanie danych z poziomu wtyczki po wgraniu do projektu QGIS
