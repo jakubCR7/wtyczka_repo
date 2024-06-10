@@ -1,6 +1,6 @@
 ## Informatyka Geodezyjna II
 ## Projekt 2 - Wtyczka do QGIS
-Wtyczka umożliwia wyznaczanie różnic wysokości pomiędzy punktami oraz liczenie pól między punktami w hektarach, metrach kwadratowych lub arach
+Wtyczka umożliwia wyznaczanie różnic wysokości pomiędzy punktami oraz liczenie pól między punktami w hektarach, metrach kwadratowych lub arach.
 
 ### Wymagania do obsługi programu:
 Do poprawnego działania wtyczki wymagany jest zainstalowany program QGiS. Folder z wtyczką musi być umieszczony w folderze plugins w plikach programu QGiS. 
@@ -41,7 +41,7 @@ Obliczanie różnicy wysokości wymaga wyboru jedynie dwóch punktów. W przypad
 większej od 2, zostanie wyświetlony komunikat **Różnica wysokosci: W celu obliczenia różnicy wysokosci wybierz 2 punkty.** <br>
 Obliczanie pola powierzchni wymaga wyboru trzech i więcej punktów. W przypadku wybrania ilości punktów 
 mniejszej od 3, zostanie wyświetlony komunikat **Pole powierzchni: W celu policzenia pola wybierz conajmniej 3 punkty.** <br>
-W przypadku pracy w projekcie bez aktywnej warstwy zostanie wyświetlony komunikat **Nie wybrano aktywnej warstwy** <br> 
+W przypadku pracy w projekcie bez aktywnej warstwy zostanie wyświetlony komunikat **Nie wybrano aktywnej warstwy.** <br> 
 
 ### Autorzy programu:
 Adam Buława <br>
